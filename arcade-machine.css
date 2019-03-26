@@ -1,0 +1,220 @@
+#machine{
+  width: 250px;
+  height: 500px;
+  margin: 0;
+}
+
+#machine > *{
+  border-left: 20px ridge #4798d8;
+  border-right: 20px ridge #4798d8;
+}
+
+#machine > *,#machine{
+  box-sizing: border-box;
+}
+#machine header{height: 10%; background-color: orange}
+#controls-part{height: 10%}
+#machine footer{height: 40%}
+#machine main{
+  height: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#game-middle{
+  width: 80%;
+  height: 75%;
+  border-width: 25px 22px;
+  border-color: #ffc65f #f9a100;
+  background-color: black;
+  border-style: solid;
+}
+#controls-part{
+  position: relative
+}
+#controls-part section{
+  width: 122%;
+  height: 100%;
+  position: absolute;
+  left: -11%;
+}
+#controls{
+  height: 70%;
+  width: 100%;
+
+  border-bottom: 25px solid #ffcc81;
+	border-left: 23px solid transparent;
+	border-right: 23px solid transparent;
+	height: 0;
+  width: calc(100% - 46px);
+
+
+}
+#controls-part section footer{
+  background-color: #fdc26c;
+  width: 100%;
+  height: calc(100% - 25px);
+
+}
+
+#machine footer{position: relative;background-color: orange}
+#machine footer main{
+  height: 80%;
+  background-color:#fdc26c ;
+  border-bottom: 3.5px solid white;
+}
+#machine footer header{
+  position: absolute;
+  top: 0px;
+  left: -20px;
+  width: calc(100% + 40px);
+  height: 7%;
+  background-color: #00000061;
+}
+
+#machine-hold{
+  display: flex;
+  justify-content: center;
+  width: 250px;
+  height: 500px;
+}
+
+#controls{position: relative;}
+#controls-hold{
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 25px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.control{
+  margin: 0;
+  width: 2.25em;
+  height: 0.75em;
+  background-color: #0c3659;
+  border-radius: 0 0 50% 50% ;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.control::after, .joystick-holder::after{
+    content: '';
+    position: absolute;
+    background-color: #4798d8;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    top: -50%;
+}
+
+.joystick-holder{
+  position: absolute;
+  z-index: 3;
+  width: 75%;
+  height: 80%;
+  background-color: #0c3659;
+
+  border-radius: 0 0 50% 50% ;
+  top: -50%;
+
+  display: flex;
+  justify-content: center;
+}
+
+.joystick{
+  position: relative;
+  z-index: 5;
+  top: -1.5em;
+
+  width: .45em;
+  height: 1.5em;
+  background-color: #9c9c9c;
+  transition: transform .1s ease;
+  transform-origin: center bottom;
+  perspective: 1em;
+  perspective-origin: center bottom;
+}
+
+.joystick-ball{
+  width: 1em;
+  height: 1em;
+  position: absolute;
+  margin-left: -.5em;
+  left: 50%;
+  top: -.5em;
+
+  border-radius: 50%;
+  transition: transform .15s ease;
+  background-color: red;
+  /*background: radial-gradient(ellipse at center, red 0%,#bb0000 70%,#dd0000 100%);*/
+}
+
+.to-left{
+  transform: rotate(-15deg);
+}
+
+.to-right{
+  transform: rotate(15deg);
+}
+
+.to-top .joystick-ball{
+  transform: scale(.95) translateY(15%);
+}
+
+.to-bottom .joystick-ball{
+  transform: scale(1.05) translateY(15%);
+
+}
+
+.buttons{
+  margin: 0;
+  width: 35%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.buttons button{
+  margin: 0;
+  width: 1em;
+  height: .75em;
+  border-radius: 25% 25% 50% 50%;
+  background-color: darkred;
+  position: relative;
+  z-index: 2;
+
+  padding: 0;
+  border: 0;
+  align-items: center;
+}
+
+.buttons button::after{
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: red;
+  position: absolute;
+  border-radius: 50%;
+  z-index: 1;
+
+  top: -25%;
+  left: 0;
+}
+
+.buttons button:active, .buttons button.active{
+  background-color: transparent;
+  border-radius: 50%;
+}
+
+.buttons button:active::after, .buttons button.active::after{
+  top: 0;
+}
+
+.buttons button:focus{
+  outline: none;
+}

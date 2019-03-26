@@ -1,0 +1,55 @@
+html,body{
+  min-width: 100%;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+}
+#machine-hold{margin: 0 auto;}
+
+#machine > *:not(#hold-text){
+  filter: brightness(25%);
+}
+
+#machine{position: relative;}
+
+#hold-text{
+    position: absolute;
+    top: 25%; /* (header height + main height)/2*/
+    width: 100%;
+    z-index: 3;
+    border: 0 !important;
+    text-align: center;
+}
+
+.gameover{
+  margin: 0;
+  text-align: center;
+  color: RED;
+  font-size: 175%;
+  font-family: impact;
+  /*filter: brightness(75%);*/
+  filter: brightness(70%);
+  animation:  pulando ease 1s infinite;
+}
+
+
+body{
+  background-color: #080808;
+  zoom: 125%;
+  position: relative;
+}
+
+#foot{
+  height: calc(100% - 500px);
+  width: 100%;
+  background-color: black;
+  box-shadow: 0px 0.5em 2em 1em rgba(0,0,0,0.75);
+  position: absolute;
+  bottom: 0;
+}
+
+@keyframes pulando{
+  0%{font-size: 175%}
+  50%{font-size: 180%}
+  100%{font-size: 175%}
+}
