@@ -1,0 +1,13 @@
+{
+	"short_name": "Arcade",
+	"name": "Arcade Machine",
+	"icons": [
+	 {
+    	"src": "arcade.png",
+    	"type": "image/png",
+    	"sizes": "566x566"
+  	}],
+  	"start_url": "index.html",
+  	"background_color": "black",
+  	"display": "standalone"
+}
